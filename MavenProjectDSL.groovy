@@ -7,9 +7,6 @@ job('First-Maven-Project-Via-DSL'){
 		scm('* * * * *')
 	}
 	steps{
-		maven('clean package', 'single-module/pom.xml')
 	}
-	publishers{
-		archiveArtifacts '**/*.jar'
-	}
+
 }
