@@ -5,7 +5,7 @@ job('Jenkins_Docker'){
 	triggers{
 		scm('15 * * * *')
 	}
-	stages('Build')
+	stage('Build')
 	{
 		steps{
 			sh 'mvn clean package'
