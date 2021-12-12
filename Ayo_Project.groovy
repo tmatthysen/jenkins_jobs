@@ -1,14 +1,17 @@
 job('Jenkins_Docker'){
 	scm{
-		git("https://github.com/tmatthysen/maven-samples-master.git", 'main')
+		git("https://github.com/tmatthysen/project_java.git", 'master')
 	}
 	triggers{
 		scm('15 * * * *')
 	}
-	stage('Build')
+	stages
 	{
-		steps{
-			sh 'mvn clean package'
+		stage('Build')
+		{
+			steps{
+				sh 'mvn clean package'
+			}
 		}
 	}
 }
