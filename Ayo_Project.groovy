@@ -1,6 +1,6 @@
 job('Jenkins_Docker'){
 	scm{
-		git("https://github.com/tmatthysen/project_java.git", 'master')
+		git("https://github.com/tmatthysen/project_java.git", 'main')
 	}
 	triggers{
 		scm('15 * * * *')
